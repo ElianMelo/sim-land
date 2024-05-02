@@ -12,8 +12,13 @@ public class InventoryAccessoryBoard : MonoBehaviour
 
     private List<GameObject> accessorys = new List<GameObject>();
 
-    private void OnEnable()
+    public delegate void ItemEquipped(AccessorySO accessorySO);
+    public static event ItemEquipped OnItemEquipped;
+
+    public void ChangeItemsList(List<AccessorySO> newItems)
     {
+        items = newItems;
+
         foreach (var accessory in accessorys)
         {
             Destroy(accessory);
@@ -23,11 +28,6 @@ public class InventoryAccessoryBoard : MonoBehaviour
         {
             AddAccessory(accessorySO);
         }
-    }
-
-    public void ChangeItemsList(List<AccessorySO> newItems)
-    {
-        items = newItems;
     }
 
     public void AddAccessory(AccessorySO accessorySO)
@@ -56,6 +56,8 @@ public class InventoryAccessoryBoard : MonoBehaviour
 
     public void EquipAccessory(AccessorySO accessorySO)
     {
+        OnItemEquipped?.Invoke(accessorySO);
+        //InventoryAccessoryBoard
         // accessorySO.type
     }
 }

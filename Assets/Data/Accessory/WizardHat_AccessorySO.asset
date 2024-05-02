@@ -16,3 +16,4 @@ MonoBehaviour:
   title: Wizard Hat
   price: 1000
   type: 0
+  playerBodyPartSO: {fileID: 11400000, guid: 38e7751e7975fec4091f7d82bcacaa85, type: 2}

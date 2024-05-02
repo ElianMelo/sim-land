@@ -19,9 +19,10 @@ public class PlayerBodyPart : MonoBehaviour
 {
     [SerializeField]
     private PlayerBodyPartSO playerBodyPartSO;
+    [SerializeField]
+    private BodyPartType type;
 
     private Animator animator;
-
     private PlayerAnimationState currentState;
 
     void ChangeAnimationState(PlayerAnimationState newState)
@@ -85,5 +86,16 @@ public class PlayerBodyPart : MonoBehaviour
         {
             GoToIdleAnimationState();
         }
+    }
+
+    public BodyPartType GetBodyPartType()
+    {
+        return type;
+    }
+
+    public void ChangePlayerBodyPartSO(PlayerBodyPartSO newPlayerBodyPartSO)
+    {
+        playerBodyPartSO = newPlayerBodyPartSO;
+        animator.runtimeAnimatorController = newPlayerBodyPartSO.animatorController;
     }
 }

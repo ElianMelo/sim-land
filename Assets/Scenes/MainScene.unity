@@ -369,6 +369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBodyPartSO: {fileID: 11400000, guid: cccef3416a9d09d4e98bf44b166e4999, type: 2}
+  type: 1
 --- !u!212 &316680726
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1304,6 +1305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBodyPartSO: {fileID: 11400000, guid: e77bb7957546f5a409747e639f7910f5, type: 2}
+  type: 3
 --- !u!95 &568168562
 Animator:
   serializedVersion: 5
@@ -1393,6 +1395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBodyPartSO: {fileID: 11400000, guid: b7fe1ab88716aa2478c9669128d138f5, type: 2}
+  type: 0
 --- !u!212 &629988409
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5328,8 +5331,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1590020897}
-  - component: {fileID: 1590020899}
   - component: {fileID: 1590020898}
+  - component: {fileID: 1590020899}
   m_Layer: 5
   m_Name: InventoryAcessoryBoard
   m_TagString: Untagged
@@ -5389,10 +5392,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1590020896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08425485e88e3bd4fbf4bcea21e639f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 05530deb6f15d374ebab99f87e3b9edf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessoryPrefab: {fileID: 941855228341182389, guid: 175d809193477a240bff94949af6b47c, type: 3}
+  accessoryPrefab: {fileID: 3232646866838263733, guid: d24d5640ead042e459dafccf77798958, type: 3}
   items: []
 --- !u!1 &1626940908
 GameObject:
@@ -6008,6 +6011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBodyPartSO: {fileID: 11400000, guid: cf26b2f07567b6145b4535b441349ec7, type: 2}
+  type: 2
 --- !u!212 &2097134773
 SpriteRenderer:
   m_ObjectHideFlags: 0

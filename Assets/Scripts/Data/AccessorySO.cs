@@ -11,4 +11,5 @@ public class AccessorySO : ScriptableObject
     public string title;
     public int price;
     public BodyPartType type;
+    public PlayerBodyPartSO playerBodyPartSO;
 }

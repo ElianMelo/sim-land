@@ -5,7 +5,7 @@ using UnityEngine;
 public class InventoryBoard : MonoBehaviour
 {
     [SerializeField]
-    private AccessoryBoard board;
+    private InventoryAccessoryBoard board;
 
     public void CloseInventory()
     {

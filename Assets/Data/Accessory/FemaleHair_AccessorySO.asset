@@ -16,3 +16,4 @@ MonoBehaviour:
   title: Female Hair
   price: 500
   type: 2
+  playerBodyPartSO: {fileID: 11400000, guid: cf26b2f07567b6145b4535b441349ec7, type: 2}

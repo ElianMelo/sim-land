@@ -19,6 +19,23 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        InventoryAccessoryBoard.OnItemEquipped += OnItemEquipped;
+    }
+
+    private void OnDestroy()
+    {
+        InventoryAccessoryBoard.OnItemEquipped -= OnItemEquipped;
+    }
+
+    public void OnItemEquipped(AccessorySO accessorySO)
+    {
+        foreach (var part in playerBodyPartList)
+        {
+            if(part.GetBodyPartType() == accessorySO.type)
+            {
+                part.ChangePlayerBodyPartSO(accessorySO.playerBodyPartSO);
+            }
+        }
     }
 
     void Update()
