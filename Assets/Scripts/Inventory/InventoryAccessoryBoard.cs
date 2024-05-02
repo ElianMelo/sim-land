@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AccessoryBoard : MonoBehaviour
+public class InventoryAccessoryBoard : MonoBehaviour
 {
     [SerializeField]
     private GameObject accessoryPrefab;
@@ -34,8 +34,8 @@ public class AccessoryBoard : MonoBehaviour
     {
         var instance = Instantiate(accessoryPrefab);
         instance.transform.SetParent(this.transform);
-        instance.GetComponent<AccessoryItem>().LoadAccessorySOData(accessorySO);
-        instance.GetComponent<AccessoryItem>().SetAccessoryBoard(this);
+        instance.GetComponent<InventoryAccessoryItem>().LoadAccessorySOData(accessorySO);
+        instance.GetComponent<InventoryAccessoryItem>().SetAccessoryBoard(this);
         instance.GetComponent<RectTransform>().localScale = new Vector3(2f, 2f, 2f);
         accessorys.Add(instance);
     }
@@ -47,10 +47,15 @@ public class AccessoryBoard : MonoBehaviour
         Destroy(accessory);
     }
 
-    public void BuyAccessory(GameObject gameObject, AccessorySO accessorySO)
+    public void SellAccessory(GameObject gameObject, AccessorySO accessorySO)
     {
-        MoneyManager.Instance.RemoveAmount(accessorySO.price);
-        InventoryManager.Instance.AddAccessory(accessorySO);
+        MoneyManager.Instance.AddAmount(accessorySO.price);
+        InventoryManager.Instance.RemoveAccessory(accessorySO);
         RemoveAccessory(gameObject, accessorySO);
+    }
+
+    public void EquipAccessory(AccessorySO accessorySO)
+    {
+        // accessorySO.type
     }
 }

@@ -7,9 +7,8 @@ using UnityEngine;
 [Serializable]
 public class AccessorySO : ScriptableObject
 {
-    public Sprite picture;
-    public string description;
-    public int reward;
-    public int amount;
-    // public ItemSO item;
+    public Sprite icon;
+    public string title;
+    public int price;
+    public BodyPartType type;
 }

@@ -25,6 +25,11 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.Instance.GetGameState() == GameState.Paused) return;
 
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            InterfaceManager.Instance.OpenInventory();
+        }
+
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
 

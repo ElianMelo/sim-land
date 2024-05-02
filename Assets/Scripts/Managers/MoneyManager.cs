@@ -17,12 +17,12 @@ public class MoneyManager : MonoBehaviour
     }
     private void Start()
     {
-        // Invoke("Test", 2f);
+        Invoke("Test", 0f);
     }
 
     public void Test()
     {
-        AddAmount(20);
+        AddAmount(5000);
     }
 
     public int GetAmount()

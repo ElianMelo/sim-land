@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43193439770e5f441b9de70494d360a7, type: 3}
+  m_Name: FemaleHair_AccessorySO
+  m_EditorClassIdentifier: 
+  icon: {fileID: -63594486, guid: f1f8fed00a3ef0a4ab96bfc517c1d1fe, type: 3}
+  title: Female Hair
+  price: 500
+  type: 2
