@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,8 +11,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private float speed;
-    private Rigidbody2D playerRb;
+    [SerializeField]
+    private List<PlayerBodyPart> playerBodyPartList;
 
+    private Rigidbody2D playerRb;
 
     private void Start()
     {
@@ -19,8 +23,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        xInput = Input.GetAxis("Horizontal");
-        yInput = Input.GetAxis("Vertical");
+        xInput = Input.GetAxisRaw("Horizontal");
+        yInput = Input.GetAxisRaw("Vertical");
+
+        foreach (var part in playerBodyPartList)
+        {
+            part.ChangeAnimation(xInput, yInput);
+        }
     }
 
     private void FixedUpdate()
