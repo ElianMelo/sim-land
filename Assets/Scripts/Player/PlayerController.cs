@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.GetGameState() == GameState.Paused) return;
+
         xInput = Input.GetAxisRaw("Horizontal");
         yInput = Input.GetAxisRaw("Vertical");
 

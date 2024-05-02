@@ -5,26 +5,27 @@ using UnityEngine;
 public class Merchant : MonoBehaviour
 {
     public GameObject dialogTextUI;
-    private bool canTriggerDialog = false;
+    private bool canTriggerMarket = false;
 
     private void Update()
     {
-        if (canTriggerDialog && Input.GetKeyDown(KeyCode.E))
+        if (canTriggerMarket && Input.GetKeyDown(KeyCode.E))
         {
-            canTriggerDialog = false;
+            canTriggerMarket = false;
             dialogTextUI.SetActive(false);
+            InterfaceManager.Instance.OpenMarket();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        canTriggerDialog = true;
+        canTriggerMarket = true;
         dialogTextUI.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        canTriggerDialog = false;
+        canTriggerMarket = false;
         dialogTextUI.SetActive(false);
     }
 }

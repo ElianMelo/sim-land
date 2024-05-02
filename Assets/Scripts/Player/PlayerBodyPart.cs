@@ -3,24 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerAnimationState
+{
+    IDLE_DOWN,
+    IDLE_LEFT,
+    IDLE_RIGHT,
+    IDLE_UP,
+    WALK_DOWN,
+    WALK_LEFT,
+    WALK_RIGHT,
+    WALK_UP
+}
+
 public class PlayerBodyPart : MonoBehaviour
 {
     [SerializeField]
     private PlayerBodyPartSO playerBodyPartSO;
 
     private Animator animator;
-
-    public enum PlayerAnimationState
-    {
-        IDLE_DOWN,
-        IDLE_LEFT,
-        IDLE_RIGHT,
-        IDLE_UP,
-        WALK_DOWN,
-        WALK_LEFT,
-        WALK_RIGHT,
-        WALK_UP
-    }
 
     private PlayerAnimationState currentState;
 
