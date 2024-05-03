@@ -2,7 +2,7 @@
 ## 🏷️ Resume
 Game focused on customization, buying and selling items
 ## 📃 Explaining the system & Personal Assessment
-https://docs.google.com/document/d/1X7s6mcGc7xURz07emWObXPQyBOBG2oVwOsE6D0-tenc/edit?usp=sharing
+https://drive.google.com/file/d/12EJcpEbzjHkWlpFOLak56vaJupp3qMJE/view?usp=sharing
 
 ## 🕹️ Build
 https://drive.google.com/file/d/1S1ve32YpTjzyToKBxcARDs8wLcei5FGx/view?usp=sharing

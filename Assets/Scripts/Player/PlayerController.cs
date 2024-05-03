@@ -61,7 +61,8 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        if(Mathf.Abs(xInput) == 1 && Mathf.Abs(yInput) == 1) { playerRb.velocity = Vector2.zero; return; };
+        if (Mathf.Abs(xInput) == 1 && Mathf.Abs(yInput) == 1) { playerRb.velocity = Vector2.zero; return; };
         playerRb.velocity = new Vector2(xInput, yInput).normalized * speed;
     }
 }
+
