@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    private GameState currentState = GameState.Playing;
+    private GameState currentState = GameState.Paused;
 
     private void Awake()
     {

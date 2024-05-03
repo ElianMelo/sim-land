@@ -6,7 +6,8 @@ public enum InterfaceState
 {
     NONE,
     MARKET,
-    INVENTORY
+    INVENTORY,
+    TUTORIAL
 }
 
 public class InterfaceManager : MonoBehaviour
@@ -18,12 +19,19 @@ public class InterfaceManager : MonoBehaviour
     private GameObject inventoryBoard;
     [SerializeField]
     private GameObject choiceBuyOrSell;
+    [SerializeField]
+    private GameObject tutorial;
 
-    private InterfaceState currentState = InterfaceState.NONE;
+    private InterfaceState currentState = InterfaceState.TUTORIAL;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        tutorial.SetActive(true);
     }
 
     private void Update()
@@ -37,6 +45,9 @@ public class InterfaceManager : MonoBehaviour
                     break;
                 case InterfaceState.INVENTORY:
                     CloseInventory();
+                    break;
+                case InterfaceState.TUTORIAL:
+                    CloseTutorial();
                     break;
             }
         }
@@ -75,6 +86,13 @@ public class InterfaceManager : MonoBehaviour
     public void CloseInventory()
     {
         inventoryBoard.SetActive(false);
+        GameManager.Instance.ResumeGame();
+        currentState = InterfaceState.NONE;
+    }
+
+    public void CloseTutorial()
+    {
+        tutorial.SetActive(false);
         GameManager.Instance.ResumeGame();
         currentState = InterfaceState.NONE;
     }
