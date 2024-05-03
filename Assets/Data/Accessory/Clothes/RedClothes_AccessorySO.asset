@@ -15,5 +15,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 5e32f358002649241950427e2d3b0fa5, type: 3}
   title: Red Clothes
   price: 100
+  equipped: 1
   type: 1
   playerBodyPartSO: {fileID: 11400000, guid: cccef3416a9d09d4e98bf44b166e4999, type: 2}

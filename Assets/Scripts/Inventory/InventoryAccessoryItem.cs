@@ -14,12 +14,31 @@ public class InventoryAccessoryItem : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI price;
     [SerializeField]
+    private GameObject equipButtonObject;
+    [SerializeField]
     private AccessorySO accessorySO;
 
     private InventoryAccessoryBoard accessoryBoard;
 
+    private Button equipButton;
+    private TextMeshProUGUI equipButtonText;
+
     private void Start()
     {
+        equipButton = equipButtonObject.GetComponent<Button>();
+        equipButtonText = equipButtonObject.GetComponentInChildren<TextMeshProUGUI>();
+
+        //if(accessorySO.equipped)
+        //{
+        //    if(accessorySO.type == BodyPartType.CLOTHES)
+        //    {
+        //        equipButtonText.text = "Equipped";
+        //    } else
+        //    {
+        //        equipButtonText.text = "Unequip";
+        //    }
+        //}
+
         LoadAccessorySOData(accessorySO);
     }
 

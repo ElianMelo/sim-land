@@ -265,6 +265,7 @@ MonoBehaviour:
   icon: {fileID: 2258092848985754640}
   title: {fileID: 3353910961432032578}
   price: {fileID: 5065794028749479868}
+  equipButtonObject: {fileID: 4258263345985447494}
   accessorySO: {fileID: 11400000, guid: 8ad60926441bd894cb71bd0722c049a5, type: 2}
 --- !u!1 &4258263345985447494
 GameObject:

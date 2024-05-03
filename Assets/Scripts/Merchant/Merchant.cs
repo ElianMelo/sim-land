@@ -37,9 +37,9 @@ public class Merchant : MonoBehaviour
         items.Add(accessorySO);
     }
 
-    public void RemoveItem(AccessorySO accessorySO)
+    public void ClearItems()
     {
-        items.Remove(accessorySO);
+        items.Clear();
     }
 
     public List<AccessorySO> GetItems()

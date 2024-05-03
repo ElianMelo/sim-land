@@ -6,6 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
 
+    [SerializeField]
     private List<AccessorySO> accessories = new List<AccessorySO>();
 
     private void Awake()

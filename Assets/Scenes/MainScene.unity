@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5866ba99df6f5074e9fd164c47e0d0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBodyPartSO: {fileID: 11400000, guid: cccef3416a9d09d4e98bf44b166e4999, type: 2}
+  accessorySO: {fileID: 11400000, guid: ce04192d6369bb34aaa07762a4d0bd26, type: 2}
   type: 1
 --- !u!212 &316680726
 SpriteRenderer:
@@ -853,12 +853,10 @@ MonoBehaviour:
   items:
   - {fileID: 11400000, guid: 03c245463be61744b90d89780f2ef7eb, type: 2}
   - {fileID: 11400000, guid: 571678005d4f2d84eb724eb1164acb76, type: 2}
-  - {fileID: 11400000, guid: 8ad60926441bd894cb71bd0722c049a5, type: 2}
   - {fileID: 11400000, guid: 2e0653469795437479e63b8eae3c4b50, type: 2}
   - {fileID: 11400000, guid: 797ecfe6509679e48b9dfb9f70ba97a5, type: 2}
   - {fileID: 11400000, guid: 624e46decee6124458f1fb1d1cde3271, type: 2}
   - {fileID: 11400000, guid: b0d0e5b03bab2ba49ba720c2efd9c162, type: 2}
-  - {fileID: 11400000, guid: ce04192d6369bb34aaa07762a4d0bd26, type: 2}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,7 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5866ba99df6f5074e9fd164c47e0d0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBodyPartSO: {fileID: 11400000, guid: e77bb7957546f5a409747e639f7910f5, type: 2}
+  accessorySO: {fileID: 11400000, guid: 333b436d5ca508b4ba482d243716496c, type: 2}
   type: 3
 --- !u!95 &568168562
 Animator:
@@ -1403,7 +1401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5866ba99df6f5074e9fd164c47e0d0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBodyPartSO: {fileID: 0}
+  accessorySO: {fileID: 0}
   type: 0
 --- !u!212 &629988409
 SpriteRenderer:
@@ -6526,6 +6524,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55d116b69dcaa84eb473382881c9160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accessories:
+  - {fileID: 11400000, guid: 8ad60926441bd894cb71bd0722c049a5, type: 2}
+  - {fileID: 11400000, guid: ce04192d6369bb34aaa07762a4d0bd26, type: 2}
 --- !u!1 &2097134769
 GameObject:
   m_ObjectHideFlags: 0
@@ -6593,7 +6594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5866ba99df6f5074e9fd164c47e0d0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBodyPartSO: {fileID: 11400000, guid: cf26b2f07567b6145b4535b441349ec7, type: 2}
+  accessorySO: {fileID: 11400000, guid: 8ad60926441bd894cb71bd0722c049a5, type: 2}
   type: 2
 --- !u!212 &2097134773
 SpriteRenderer:

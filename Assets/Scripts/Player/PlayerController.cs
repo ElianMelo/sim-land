@@ -33,7 +33,12 @@ public class PlayerController : MonoBehaviour
         {
             if(part.GetBodyPartType() == accessorySO.type)
             {
-                part.ChangePlayerBodyPartSO(accessorySO.playerBodyPartSO);
+                //AccessorySO oldAccessory = part.GetCurrentAccessorySO();
+                //if(oldAccessory != null)
+                //{
+                //    oldAccessory.equipped = false;
+                //}
+                part.ChangeAccessorySO(accessorySO);
                 part.ForceLastAnimation();
             }
         }

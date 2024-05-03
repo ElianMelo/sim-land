@@ -35,20 +35,36 @@ public class AccessoryBoard : MonoBehaviour
 
     public void UpdateItems()
     {
+        ClearItems();
+        AddItems();
+        AddSelledItems();
+    }
+
+    public void ClearItems()
+    {
         foreach (var accessory in accessorys)
         {
             Destroy(accessory);
         }
         accessorys.Clear();
+    }
+
+    public void AddItems()
+    {
         foreach (AccessorySO accessorySO in items)
         {
             AddAccessory(accessorySO);
         }
-        if(marketType == MarketType.BUY)
+    }
+
+    public void AddSelledItems()
+    {
+        if (marketType == MarketType.BUY)
         {
             foreach (AccessorySO accessorySO in selledItems)
             {
                 AddAccessory(accessorySO);
+                items.Add(accessorySO);
             }
             selledItems.Clear();
         }

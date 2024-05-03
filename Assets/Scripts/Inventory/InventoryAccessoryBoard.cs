@@ -49,6 +49,7 @@ public class InventoryAccessoryBoard : MonoBehaviour
 
     public void EquipAccessory(AccessorySO accessorySO)
     {
+        // accessorySO.equipped = true;
         OnItemEquipped?.Invoke(accessorySO);
     }
 }

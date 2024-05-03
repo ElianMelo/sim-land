@@ -18,7 +18,7 @@ public enum PlayerAnimationState
 public class PlayerBodyPart : MonoBehaviour
 {
     [SerializeField]
-    private PlayerBodyPartSO playerBodyPartSO;
+    private AccessorySO accessorySO;
     [SerializeField]
     private BodyPartType type;
 
@@ -27,6 +27,7 @@ public class PlayerBodyPart : MonoBehaviour
 
     private void ChangeAnimationState(PlayerAnimationState newState)
     {
+        if (!animator.runtimeAnimatorController) return;
         // stop the same animation from interruption itself
         if (currentState == newState) return;
         // play the animation
@@ -64,7 +65,10 @@ public class PlayerBodyPart : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        animator.runtimeAnimatorController = playerBodyPartSO.animatorController;
+        if(accessorySO && accessorySO.playerBodyPartSO != null)
+        {
+            animator.runtimeAnimatorController = accessorySO.playerBodyPartSO.animatorController;
+        }
     }
 
     public void ChangeAnimation(float xInput, float yInput)
@@ -99,9 +103,19 @@ public class PlayerBodyPart : MonoBehaviour
         return type;
     }
 
-    public void ChangePlayerBodyPartSO(PlayerBodyPartSO newPlayerBodyPartSO)
+    public AccessorySO GetCurrentAccessorySO()
     {
-        playerBodyPartSO = newPlayerBodyPartSO;
-        animator.runtimeAnimatorController = newPlayerBodyPartSO.animatorController;
+        return accessorySO;
+    }
+
+    public void ChangeAccessorySO(AccessorySO newAccessorySO)
+    {
+        accessorySO = newAccessorySO;
+        ChangePlayerBodyPartSO();
+    }
+
+    public void ChangePlayerBodyPartSO()
+    {
+        animator.runtimeAnimatorController = accessorySO.playerBodyPartSO.animatorController;
     }
 }
