@@ -5,7 +5,7 @@ Game focused on customization, buying and selling items
 https://drive.google.com/file/d/12EJcpEbzjHkWlpFOLak56vaJupp3qMJE/view?usp=sharing
 
 ## 🕹️ Build
-https://drive.google.com/file/d/1S1ve32YpTjzyToKBxcARDs8wLcei5FGx/view?usp=sharing
+https://drive.google.com/file/d/1jnfWKIJWmm4RJX-TMH_5ccGEku8J_RSH/view?usp=sharing
 
 ## 🎮 Controls
 WASD - Movement
