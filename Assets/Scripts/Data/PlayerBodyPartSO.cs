@@ -1,10 +1,10 @@
-using UnityEditor.Animations;
+using UnityEngine.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerBodyPartSO", menuName = "ScriptableObjects/PlayerBodyPartSO", order = 1)]
 public class PlayerBodyPartSO : ScriptableObject
 {
-    public AnimatorController animatorController;
+    public string animatorControllerName;
 
     public BodyPartType bodyPartType;
 }

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b95a63d3b7e9d94383932c326bed8f6, type: 3}
   m_Name: FemaleWhiteHair_PlayerBodyPartSO
   m_EditorClassIdentifier: 
-  animatorController: {fileID: 9100000, guid: 633bfcdf386d6564db02ef2c20c0e672, type: 2}
+  animatorControllerName: FemaleWhiteHair_PlayerAnimController
   bodyPartType: 2

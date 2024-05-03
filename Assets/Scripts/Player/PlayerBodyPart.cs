@@ -67,7 +67,7 @@ public class PlayerBodyPart : MonoBehaviour
         animator = GetComponent<Animator>();
         if(accessorySO && accessorySO.playerBodyPartSO != null)
         {
-            animator.runtimeAnimatorController = accessorySO.playerBodyPartSO.animatorController;
+            ChangePlayerBodyPartSO();
         }
     }
 
@@ -116,6 +116,8 @@ public class PlayerBodyPart : MonoBehaviour
 
     public void ChangePlayerBodyPartSO()
     {
-        animator.runtimeAnimatorController = accessorySO.playerBodyPartSO.animatorController;
+        animator.runtimeAnimatorController =
+                (RuntimeAnimatorController)Resources.Load("AnimationControllers/" +
+                accessorySO.playerBodyPartSO.animatorControllerName, typeof(RuntimeAnimatorController));
     }
 }
