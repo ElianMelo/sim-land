@@ -1,7 +1,7 @@
 # Sim Land
 ## 🏷️ Resume
 Game focused on customization, buying and selling items
-## 📃 Documentation
+## 📃 Explaining the system & Personal Assessment
 https://docs.google.com/document/d/1X7s6mcGc7xURz07emWObXPQyBOBG2oVwOsE6D0-tenc/edit?usp=sharing
 
 ## 🕹️ Build

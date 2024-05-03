@@ -1,4 +1,3 @@
-using UnityEngine.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerBodyPartSO", menuName = "ScriptableObjects/PlayerBodyPartSO", order = 1)]

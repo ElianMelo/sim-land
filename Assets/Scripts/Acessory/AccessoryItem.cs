@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,7 +18,6 @@ public class AccessoryItem : MonoBehaviour
     private GameObject sellButton;
 
     private AccessoryBoard accessoryBoard;
-    private MarketType marketType;
 
     private void Start()
     {
@@ -34,7 +31,6 @@ public class AccessoryItem : MonoBehaviour
 
     public void SetMarketType(MarketType marketType)
     {
-        this.marketType = marketType;
         switch (marketType)
         {
             case MarketType.BUY:

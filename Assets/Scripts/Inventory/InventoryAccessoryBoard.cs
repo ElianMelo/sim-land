@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,7 +48,6 @@ public class InventoryAccessoryBoard : MonoBehaviour
 
     public void EquipAccessory(AccessorySO accessorySO)
     {
-        // accessorySO.equipped = true;
         OnItemEquipped?.Invoke(accessorySO);
     }
 }

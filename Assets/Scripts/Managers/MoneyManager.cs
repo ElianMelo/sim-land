@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoneyManager : MonoBehaviour
@@ -9,7 +7,7 @@ public class MoneyManager : MonoBehaviour
     public delegate void MoneyChange();
     public static event MoneyChange OnMoneyChanged;
 
-    private int amount = 500;
+    private int amount = 5500;
 
     private void Awake()
     {
@@ -17,12 +15,7 @@ public class MoneyManager : MonoBehaviour
     }
     private void Start()
     {
-        Invoke("Test", 0f);
-    }
-
-    public void Test()
-    {
-        AddAmount(5000);
+        OnMoneyChanged?.Invoke();
     }
 
     public int GetAmount()

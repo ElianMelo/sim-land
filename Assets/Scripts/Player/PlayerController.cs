@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -33,11 +30,6 @@ public class PlayerController : MonoBehaviour
         {
             if(part.GetBodyPartType() == accessorySO.type)
             {
-                //AccessorySO oldAccessory = part.GetCurrentAccessorySO();
-                //if(oldAccessory != null)
-                //{
-                //    oldAccessory.equipped = false;
-                //}
                 part.ChangeAccessorySO(accessorySO);
                 part.ForceLastAnimation();
             }

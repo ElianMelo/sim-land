@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public enum PlayerAnimationState
@@ -28,12 +26,9 @@ public class PlayerBodyPart : MonoBehaviour
     private void ChangeAnimationState(PlayerAnimationState newState)
     {
         if (!animator.runtimeAnimatorController) return;
-        // stop the same animation from interruption itself
         if (currentState == newState) return;
-        // play the animation
         string enumString = Enum.GetName(typeof(PlayerAnimationState), newState);
         animator.Play(enumString);
-        // reassign the current state
         currentState = newState;
     }
 

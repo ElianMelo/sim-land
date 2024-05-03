@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,25 +18,8 @@ public class InventoryAccessoryItem : MonoBehaviour
 
     private InventoryAccessoryBoard accessoryBoard;
 
-    private Button equipButton;
-    private TextMeshProUGUI equipButtonText;
-
     private void Start()
     {
-        equipButton = equipButtonObject.GetComponent<Button>();
-        equipButtonText = equipButtonObject.GetComponentInChildren<TextMeshProUGUI>();
-
-        //if(accessorySO.equipped)
-        //{
-        //    if(accessorySO.type == BodyPartType.CLOTHES)
-        //    {
-        //        equipButtonText.text = "Equipped";
-        //    } else
-        //    {
-        //        equipButtonText.text = "Unequip";
-        //    }
-        //}
-
         LoadAccessorySOData(accessorySO);
     }
 

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InventoryBoard : MonoBehaviour
@@ -16,6 +14,5 @@ public class InventoryBoard : MonoBehaviour
     {
         board.ChangeItemsList(InventoryManager.Instance.GetAccessories());
     }
-
 
 }
