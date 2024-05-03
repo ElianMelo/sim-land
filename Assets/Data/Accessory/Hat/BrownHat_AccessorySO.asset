@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43193439770e5f441b9de70494d360a7, type: 3}
   m_Name: BrownHat_AccessorySO
   m_EditorClassIdentifier: 
-  icon: {fileID: -1733845681, guid: 743ca7d597e674a498ad36e57fc92fb1, type: 3}
+  icon: {fileID: 21300000, guid: e73e159c913226b419190e478f8012c3, type: 3}
   title: Brown Hat
   price: 100
   type: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum MarketState
+public enum MarketType
 {
     BUY,
     SELL
@@ -18,11 +18,13 @@ public class AccessoryBoard : MonoBehaviour
 
     private List<GameObject> accessorys = new List<GameObject>();
 
-    private MarketState currentState = MarketState.BUY;
+    private List<AccessorySO> selledItems = new List<AccessorySO>();
 
-    public void ChangeMarketState(MarketState newMarketState)
+    private MarketType marketType = MarketType.BUY;
+
+    public void ChangeMarketState(MarketType newMarketType)
     {
-        currentState = newMarketState;
+        marketType = newMarketType;
     }
 
     public void ChangeItemsList(List<AccessorySO> newItems)
@@ -42,14 +44,24 @@ public class AccessoryBoard : MonoBehaviour
         {
             AddAccessory(accessorySO);
         }
+        if(marketType == MarketType.BUY)
+        {
+            foreach (AccessorySO accessorySO in selledItems)
+            {
+                AddAccessory(accessorySO);
+            }
+            selledItems.Clear();
+        }
     }
 
     public void AddAccessory(AccessorySO accessorySO)
     {
         var instance = Instantiate(accessoryPrefab);
         instance.transform.SetParent(this.transform);
-        instance.GetComponent<AccessoryItem>().LoadAccessorySOData(accessorySO);
-        instance.GetComponent<AccessoryItem>().SetAccessoryBoard(this);
+        AccessoryItem accessoryItem = instance.GetComponent<AccessoryItem>();
+        accessoryItem.LoadAccessorySOData(accessorySO);
+        accessoryItem.SetAccessoryBoard(this);
+        accessoryItem.SetMarketType(marketType);
         instance.GetComponent<RectTransform>().localScale = new Vector3(2f, 2f, 2f);
         accessorys.Add(instance);
     }
@@ -73,6 +85,7 @@ public class AccessoryBoard : MonoBehaviour
         MoneyManager.Instance.AddAmount(accessorySO.price);
         InventoryManager.Instance.RemoveAccessory(accessorySO);
         RemoveAccessory(gameObject, accessorySO);
+        selledItems.Add(accessorySO);
     }
 
 }

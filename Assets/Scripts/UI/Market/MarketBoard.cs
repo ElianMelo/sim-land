@@ -22,14 +22,14 @@ public class MarketBoard : MonoBehaviour
     public void SetupMarketBoardBuy()
     {
         InterfaceManager.Instance.OpenMarket();
-        board.ChangeMarketState(MarketState.BUY);
+        board.ChangeMarketState(MarketType.BUY);
         board.ChangeItemsList(merchant.GetItems());
     }
 
     public void SetupMarketBoardSell()
     {
         InterfaceManager.Instance.OpenMarket();
-        board.ChangeMarketState(MarketState.SELL);
+        board.ChangeMarketState(MarketType.SELL);
         board.ChangeItemsList(InventoryManager.Instance.GetAccessories());
     }
 }

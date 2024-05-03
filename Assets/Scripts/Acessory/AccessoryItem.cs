@@ -14,8 +14,13 @@ public class AccessoryItem : MonoBehaviour
     private TextMeshProUGUI price;
     [SerializeField]
     private AccessorySO accessorySO;
+    [SerializeField]
+    private GameObject buyButton;
+    [SerializeField]
+    private GameObject sellButton;
 
     private AccessoryBoard accessoryBoard;
+    private MarketType marketType;
 
     private void Start()
     {
@@ -25,6 +30,22 @@ public class AccessoryItem : MonoBehaviour
     public void SetAccessoryBoard(AccessoryBoard accessoryBoard)
     {
         this.accessoryBoard = accessoryBoard;
+    }
+
+    public void SetMarketType(MarketType marketType)
+    {
+        this.marketType = marketType;
+        switch (marketType)
+        {
+            case MarketType.BUY:
+                buyButton.SetActive(true);
+                sellButton.SetActive(false);
+                break;
+            case MarketType.SELL:
+                sellButton.SetActive(true);
+                buyButton.SetActive(false);
+                break;
+        }
     }
 
     public void LoadAccessorySOData(AccessorySO accessorySO)

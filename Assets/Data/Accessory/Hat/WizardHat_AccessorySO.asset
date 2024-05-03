@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43193439770e5f441b9de70494d360a7, type: 3}
   m_Name: WizardHat_AccessorySO
   m_EditorClassIdentifier: 
-  icon: {fileID: 2114571274, guid: a8761008905f07741b1c7ede073b5333, type: 3}
+  icon: {fileID: 21300000, guid: f92ae5e8d891ca4488aaec6279a43ab0, type: 3}
   title: Wizard Hat
   price: 1000
   type: 0

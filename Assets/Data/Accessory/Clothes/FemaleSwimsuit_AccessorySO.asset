@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43193439770e5f441b9de70494d360a7, type: 3}
   m_Name: FemaleSwimsuit_AccessorySO
   m_EditorClassIdentifier: 
-  icon: {fileID: 1277266264, guid: 0863b1ade34001445975c79aa3dfe162, type: 3}
+  icon: {fileID: 21300000, guid: 768049f2b812c184bbbd55af3db4bd6e, type: 3}
   title: Female Swimsuit
   price: 50
   type: 1

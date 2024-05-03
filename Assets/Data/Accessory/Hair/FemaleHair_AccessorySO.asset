@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43193439770e5f441b9de70494d360a7, type: 3}
   m_Name: FemaleHair_AccessorySO
   m_EditorClassIdentifier: 
-  icon: {fileID: -63594486, guid: f1f8fed00a3ef0a4ab96bfc517c1d1fe, type: 3}
+  icon: {fileID: 21300000, guid: b60085a5507decf44b2c9781e10c8954, type: 3}
   title: Female Hair
   price: 500
   type: 2
