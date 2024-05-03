@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
             if(part.GetBodyPartType() == accessorySO.type)
             {
                 part.ChangePlayerBodyPartSO(accessorySO.playerBodyPartSO);
+                part.ForceLastAnimation();
             }
         }
     }

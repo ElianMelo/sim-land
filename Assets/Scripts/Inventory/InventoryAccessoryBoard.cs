@@ -47,17 +47,8 @@ public class InventoryAccessoryBoard : MonoBehaviour
         Destroy(accessory);
     }
 
-    public void SellAccessory(GameObject gameObject, AccessorySO accessorySO)
-    {
-        MoneyManager.Instance.AddAmount(accessorySO.price);
-        InventoryManager.Instance.RemoveAccessory(accessorySO);
-        RemoveAccessory(gameObject, accessorySO);
-    }
-
     public void EquipAccessory(AccessorySO accessorySO)
     {
         OnItemEquipped?.Invoke(accessorySO);
-        //InventoryAccessoryBoard
-        // accessorySO.type
     }
 }

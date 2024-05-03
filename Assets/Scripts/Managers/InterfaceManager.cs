@@ -12,8 +12,12 @@ public enum InterfaceState
 public class InterfaceManager : MonoBehaviour
 {
     public static InterfaceManager Instance;
-    public GameObject marketBoard;
-    public GameObject inventoryBoard;
+    [SerializeField]
+    private GameObject marketBoard;
+    [SerializeField]
+    private GameObject inventoryBoard;
+    [SerializeField]
+    private GameObject choiceBuyOrSell;
 
     private InterfaceState currentState = InterfaceState.NONE;
 
@@ -38,8 +42,17 @@ public class InterfaceManager : MonoBehaviour
         }
     }
 
+    public void OpenMarketChoice(Merchant merchant)
+    {
+        choiceBuyOrSell.SetActive(true);
+        marketBoard.GetComponent<MarketBoard>().SetMerchant(merchant);
+        GameManager.Instance.PauseGame();
+        currentState = InterfaceState.MARKET;
+    }
+
     public void OpenMarket()
     {
+        choiceBuyOrSell.SetActive(false);
         marketBoard.SetActive(true);
         GameManager.Instance.PauseGame();
         currentState = InterfaceState.MARKET;

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43193439770e5f441b9de70494d360a7, type: 3}
+  m_Name: BlueClothes_AccessorySO
+  m_EditorClassIdentifier: 
+  icon: {fileID: 484230410, guid: 1f3b8698c18f40a4c813ba6df8b37428, type: 3}
+  title: Blue Clothes
+  price: 2000
+  type: 1
+  playerBodyPartSO: {fileID: 11400000, guid: 6bd67ff2cbac4de4a81d7245c587e4ea, type: 2}

@@ -25,7 +25,7 @@ public class PlayerBodyPart : MonoBehaviour
     private Animator animator;
     private PlayerAnimationState currentState;
 
-    void ChangeAnimationState(PlayerAnimationState newState)
+    private void ChangeAnimationState(PlayerAnimationState newState)
     {
         // stop the same animation from interruption itself
         if (currentState == newState) return;
@@ -34,6 +34,12 @@ public class PlayerBodyPart : MonoBehaviour
         animator.Play(enumString);
         // reassign the current state
         currentState = newState;
+    }
+
+    public void ForceLastAnimation()
+    {
+        string enumString = Enum.GetName(typeof(PlayerAnimationState), currentState);
+        animator.Play(enumString);
     }
 
     void GoToIdleAnimationState()

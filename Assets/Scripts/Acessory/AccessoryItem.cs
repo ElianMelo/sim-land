@@ -6,11 +6,6 @@ using UnityEngine.UI;
 
 public class AccessoryItem : MonoBehaviour
 {
-    //public Sprite icon;
-    //public string title;
-    //public int price;
-    //public BodyPartType type;
-
     [SerializeField]
     private Image icon;
     [SerializeField]
@@ -46,5 +41,10 @@ public class AccessoryItem : MonoBehaviour
         {
             accessoryBoard.BuyAccessory(gameObject, accessorySO);
         }
+    }
+
+    public void SellAccessory()
+    {
+        accessoryBoard.SellAccessory(gameObject, accessorySO);
     }
 }

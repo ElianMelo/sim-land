@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum MarketState
+{
+    BUY,
+    SELL
+}
+
 public class AccessoryBoard : MonoBehaviour
 {
     [SerializeField]
@@ -12,7 +18,20 @@ public class AccessoryBoard : MonoBehaviour
 
     private List<GameObject> accessorys = new List<GameObject>();
 
-    private void OnEnable()
+    private MarketState currentState = MarketState.BUY;
+
+    public void ChangeMarketState(MarketState newMarketState)
+    {
+        currentState = newMarketState;
+    }
+
+    public void ChangeItemsList(List<AccessorySO> newItems)
+    {
+        items = newItems;
+        UpdateItems();
+    }
+
+    public void UpdateItems()
     {
         foreach (var accessory in accessorys)
         {
@@ -23,11 +42,6 @@ public class AccessoryBoard : MonoBehaviour
         {
             AddAccessory(accessorySO);
         }
-    }
-
-    public void ChangeItemsList(List<AccessorySO> newItems)
-    {
-        items = newItems;
     }
 
     public void AddAccessory(AccessorySO accessorySO)
@@ -53,4 +67,12 @@ public class AccessoryBoard : MonoBehaviour
         InventoryManager.Instance.AddAccessory(accessorySO);
         RemoveAccessory(gameObject, accessorySO);
     }
+
+    public void SellAccessory(GameObject gameObject, AccessorySO accessorySO)
+    {
+        MoneyManager.Instance.AddAmount(accessorySO.price);
+        InventoryManager.Instance.RemoveAccessory(accessorySO);
+        RemoveAccessory(gameObject, accessorySO);
+    }
+
 }
